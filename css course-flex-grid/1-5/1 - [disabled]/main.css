@@ -1,0 +1,13 @@
+body {
+  background: red; }
+
+[disabled] {
+  color: green; }
+
+.main-title {
+  color: yellow; }
+
+section {
+  color: blue; }
+
+/*# sourceMappingURL=main.css.map */

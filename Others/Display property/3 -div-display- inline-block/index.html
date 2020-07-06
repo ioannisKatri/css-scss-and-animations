@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Our First Webpage</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    header
+</header>
+<nav>
+    navA
+</nav>
+<main>
+    <div>div</div>
+    <div>div</div>
+    <p>paragraph</p>
+    <div>div</div>
+</main>
+<ul role="menubar">
+
+    <!-- Rule 2A: "File" label via aria-labelledby -->
+    <li role="menuitem" aria-haspopup="true" aria-labelledby="fileLabel"><span id="fileLabel">File</span>
+        <ul role="menu">
+            <!-- Rule 2C: "New" label via Namefrom:contents -->
+            <li role="menuitem" aria-haspopup="false">New</li>
+            <li role="menuitem" aria-haspopup="false">Open…</li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>

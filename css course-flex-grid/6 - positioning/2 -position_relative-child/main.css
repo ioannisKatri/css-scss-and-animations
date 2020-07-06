@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+    overflow: hidden;
+    /*It will hide the element once it's outside of our parent like this.
+    It allows you to make sure that you do not put elements
+    anywhere in your website*/
+  }
+  
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.parent .child-1{
+    position: relative;
+    top:50px;
+    left:50px;
+}
+/*
+STATIC-> DEFAULT VALUE
+FIXED-> position in context VIEWPORT
+ABSOLUTE-> position in context HTML or the parent
+RELATIVE->  position in context THE ELEMENT ITSELF
+*/
+
+/*Basically the elements they use or behaves
+    the same way it did before when we didn't apply that value*
+
+But the cool thing is that if we now go back and add
+        for example top let's say 50 pixels and left 50
+    pixels that then we can see that the element suddenly
+moves and why is this happening ->
+
+because the position in context is the element itself
+    and at the same time the element
+is also not taken out of the document flow.
+
+It was pushed  from the current position down and left by 50px;
+
+FOR the relative positioning this simply defines
+how this element should move from the current position.
+*/

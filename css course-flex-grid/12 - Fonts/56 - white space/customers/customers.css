@@ -1,0 +1,148 @@
+.backdrop{
+  top:0;
+  left:0;
+  display: none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:100;
+  background:rgba(0,0,0,0.5);
+}
+
+
+main{
+  padding:2.5rem;
+}
+/*.testimonial {*/
+  /*font-size: 1.2em;*/
+  /*!*the pixels are specified by our browser settings, it is a bit more dynamic*!*/
+  /*!*if we wanted to use a standard font-size we would put it to the html*!*/
+  /*margin: 48px 0;*/
+/*}*/
+
+/*DIFFERENT FONT-SIZE REM and EM*/
+
+/*REM no matter if you applied as FONT SIZE or
+ --- MARGIN ---,
+  for example always refers to the FONT-SIZE.
+The calculations basis for them is the initial font size
+-------------->   of the HTML element.*/
+
+.testimonial {
+    font-size: 1.2rem;
+    /*the pixels are specified by our browser settings, it is a bit more dynamic*/
+    /*if we wanted to use a standard font-size we would put it to the html*/
+    /*margin: 3rem 0;*/
+  }
+
+  /*.testimonial__list {*/
+    /*width: 80%;*/
+    /*margin: auto;*/
+  /*}*/
+
+/*width:80% will not work without setting a wird to the testimonial__image class*/
+  .testimonial__image-container{
+    width:100%;
+    max-width:40rem;
+     /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    /*vertical-align only applies to inline and table-cell elements
+    cannot be used on block elements*/
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+    /*we will see an inline element bug we can remove it by using
+    vertical align on the image or use display:block*/
+  }
+
+  .testimonial__image{
+    width:100%;
+    /*vertical-align: middle; or use display block to
+    remove the line at the bottom that the box-shadow is creating,
+    because of the bug (read previous element)*/
+    display: block;
+  }
+
+  .testimonial__info {
+    text-align: right;
+    padding: 0.9em;
+    /*display: inline-block;*/
+    /*vertical-align: middle ;*/
+    /*width:35%;*/
+  }
+
+  #customer-2.testimonial {
+    text-align: right;
+  }
+
+  #customer-2 .testimonial__info {
+    text-align: left;
+  }
+
+  .testimonial__name {
+    margin: 0.2rem;
+    color: #ff5454;
+    font-size: 2rem;
+  }
+
+  /*REM*/
+  .testimonial__subtitle {
+    margin: 0;
+    font-size: 1.1rem;
+    /*rem is using the font-size set by the browser and not by the parent(ancestor)*/
+    color: #ccc;
+  }
+
+  .testimonial__subtitle a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .testimonial__subtitle a:hover,
+  .testimonial__subtitle a:active {
+    color: #7a7a7a;
+  }
+
+  .testimonial__text {
+    margin: 0.2rem;
+    white-space: pre-line;
+    /*We Impact the way white-space is treated inside our element*/
+    /*white-space: normal; ---> default value */
+    /*white-space: nowrap; means the text will be displayed in one line*/
+    /*white-space: pre; means the it will create a new paragraph (if we seperate the line using enter*/
+    /*-> example   <p>Hello I am Joihn</p>  -> with "pre" it will show it in one line */
+    /*but if we where doing this -> <p>Hello I am
+    Joihn</p>   --> It would say the word "John" in the other line*/
+
+    /*white-space: pre-wrap; -> same with above BUT when we press enter it will wrap the remaining text.
+    It will leave it in one line if it is a big sentence */
+
+    /*white-space: pre-line; same with above (keeps the enter) but the lines are filled after each enter as far as possible*/
+
+  }
+  
+  @media (min-width: 40rem) {
+    .testimonial {
+      /*the pixels are specified by our browser settings, it is a bit more dynamic*/
+      /*if we wanted to use a standard font-size we would put it to the html*/
+      margin: 3rem auto;
+      max-width: 1500px;
+    }
+
+    .testimonial__image-container{
+      width:66%;
+      display: inline-block;
+      vertical-align: middle;
+      /*vertical-align only applies to inline and table-cell elements
+      cannot be used on block elements*/
+      box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);
+      /*we will see an inline element bug we can remove it by using
+      vertical align on the image or use display:block*/
+    }
+
+    .testimonial__info {
+      display: inline-block;
+      vertical-align: middle ;
+      width:30%;
+    }
+
+
+  }

@@ -1,0 +1,66 @@
+h3 {
+  color: green; }
+
+p {
+  color: green; }
+
+nav ul {
+  background: #2c3e50;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+nav li {
+  display: inline-block; }
+nav a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 16px;
+  text-decoration: none; }
+nav a:hover {
+  background: #009900; }
+
+.profile-img {
+  border-radius: 999px;
+  height: 200px;
+  width: 200px;
+  border: 5px solid seagreen; }
+
+p {
+  font-size: 24px; }
+
+.panel, .little-panel, .big-panel {
+  border: 3px solid dodgerblue;
+  background: lightgreen;
+  margin: 10px; }
+
+.little-panel {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -border-radius: 5px;
+  font-size: 12px;
+  padding: 5px; }
+
+.big-panel {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -border-radius: 20px;
+  font-size: 32px;
+  padding: 20px; }
+
+.button, .jumbo-button, .light-button {
+  background: #16A085;
+  -webkit-border-radius: 5px;
+  color: #ffffff;
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none; }
+
+.jumbo-button {
+  padding: 35px; }
+
+.light-button {
+  background: #21f0c8; }
+
+/*# sourceMappingURL=main.css.map */

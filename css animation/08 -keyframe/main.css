@@ -1,0 +1,26 @@
+.box{
+    height: 200px;
+    width: 200px;
+    background: #333;
+    animation: expand 2s infinite;
+}
+
+
+@keyframes expand{
+    0%{
+        width: 600px;
+        /* height: 100px; */
+    }
+    50%{
+        width: 10px;
+        /* height: 10px; */
+    }
+    100%{
+        width: 600px;
+        /* height: 400px; */
+    }
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/animation*/
+
+/*https://www.udemy.com/css-mastering-animations/learn/v4/t/lecture/10678602?start=0*/

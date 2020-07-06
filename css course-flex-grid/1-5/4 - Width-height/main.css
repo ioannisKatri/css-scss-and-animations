@@ -1,0 +1,26 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+}
+
+#product-overview {
+    background: #ff1b68;
+    width:100%;     /*it is the default behavior -> block elements take all the available width by default*/
+    /*width:50%;  Shrinks our blocks to 50% of the width of the surrounding container*/
+    height:520px;
+}
+
+
+.section-title {
+    color: #2ddf5c;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+
+/* h1 {
+    font-family: sans-serif;
+} */

@@ -1,0 +1,44 @@
+html {
+    background-color: #fa923f;
+    padding:10px;
+}
+
+body {
+    background-color: yellow;
+    margin: 0;
+    padding: 10px;
+}
+
+header{
+    background-color: #f073e1;
+    margin:10px;
+}
+
+main{
+    background-color: #f073e1;
+    margin: 10px;
+    padding:30px;
+}
+
+nav{
+    background-color: #f073e1;
+    margin: 10px;
+}
+
+div{
+    background-color: #f800db;
+    margin: 5px;
+    padding: 5px;
+    display:inline-block;
+    width:100px;
+    height:20px;
+}
+
+p{
+    background-color: red;
+    margin: 5px;
+    padding: 5px;
+    display:inline;
+    width:300px; /*does not work for inline (p has inline from default)*/
+
+}

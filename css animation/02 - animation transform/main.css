@@ -1,0 +1,12 @@
+.box{
+    display: inline-block;
+    height:200px;
+    width:200px;
+    background: #aaa;
+    transform-origin: bottom right;
+    transition: transform 1s;
+}
+
+.box:hover{
+    transform: rotate(60deg);
+}

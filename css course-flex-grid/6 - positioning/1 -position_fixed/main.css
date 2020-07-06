@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+html {
+    background: #b3b3b3;
+    padding: 15px;
+    border: 5px solid white;
+    margin: 15px;
+    height: 2000px;
+}
+
+body {
+    background: #fa923f;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent {
+    background: white;
+    padding: 20px;
+    border: 5px solid black;
+    margin: 0;
+  }
+  
+.parent div {
+    background: rgb(105, 105, 109);
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.parent .child-1{
+     /*the default value of position is static
+     to apply a position you must have another position (not static which is the default)*/
+     position:absolute;
+/*with position fixed the element is not existing for the other elements
+It been removed from the document flow
+AND IT BEHAVES CLOSE TO AN INLINE BLOCK ELEMENT.
+
+The second element overtook the position of the navigation bar*/
+
+    width:100%;
+    top: 0px;
+    margin:0px;
+    left:0;
+    /*IT has the viewport as the positioning CONTEXT */
+    /*the position of this element depends on the viewport */
+
+}
+

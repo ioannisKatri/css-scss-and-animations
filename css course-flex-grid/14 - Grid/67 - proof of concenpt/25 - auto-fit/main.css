@@ -1,0 +1,49 @@
+ .container {
+     /*EXPLICIT GRID ---. IS the part we define (    grid-template-columns: 15rem 15rem;) and sometimes the ENTIRE GRID */
+    /*IMPLICIT GRID --> parts you did not defined they are automatically handled*/
+    margin: 20px;
+    display: grid;
+    /*grid-template-columns: 15rem 15rem;*/
+ /* it will make sure to fills the current row with as many items as possible and then it will
+     wrap and enter a new row  (if we want to restrict the max amount of items in a row we can assign a max-width to the container*/
+
+     grid-template-columns: repeat(auto-fit, 10rem); /* autofit would would behave ALMOST the same but if I reload with autofit IT WILL CENTER THEM*/
+
+     /*grid-template-columns: repeat(2, 15rem); -> alternative solution*/
+    /*We do not have rows but it default if we add display grid to any element
+    it will put all its child elelemtns into new rows (it will create new rows dynamically   */
+
+    /*BUT HOW CAN WE CONTROL THE SITE OF THESE ROWS?? default is size auto*/
+    /*Each cell is big as the content requires to be.*/
+
+     grid-template-rows: 20rem;
+
+    justify-content: center;
+    grid-gap: 1.5rem;
+     /*grid-auto-rows:auto;*/
+     /*allows us to create a style of automatically generated rows
+     default -> auto*/
+     /*grid-auto-rows:12rem;!* every row will be 12rem *!*/
+     grid-auto-rows:minmax(8rem, auto);  /*<--- also works*/
+
+     /*You can say to the grid not to add new items at a second row but to instead append new columns*/
+     /*grid-auto-flow: column;*/
+ /*allows you to define where new elements should be added as a ROW (which is the default) OR as column*/
+
+     /*IF grid-auto-flow is set to COLUMN then we can use grid-auto-columns*/
+     /*grid-auto-columns: 5rem;*/
+ }
+
+.quote {
+  border: 1px solid #fa923f;
+  background: #ffbd87;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.quote--featured {
+  border: #ff4213;
+  background: #ff9f87;
+  grid-column: span 2;
+}

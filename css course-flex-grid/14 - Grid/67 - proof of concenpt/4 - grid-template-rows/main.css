@@ -1,0 +1,43 @@
+*{
+    
+}
+.container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 200px 2fr 20%  1fr;
+    /*this allows to override the one column we have by default
+    and add more columns*/
+
+    /*grid-template-columns: 200px 150px 20%  1fr;*/
+    /*first column is 200px, second 150px third 20% of the surrounding container*/
+    /*Fraction (fr) splits up and take the remaining space */
+    /*if we hve 1fr it will create one column with the remaining space*/
+
+    /*grid-template-columns: 200px 150px 20%  2fr;*/
+    /*if we hve 2fr it splits the remaining into 2 columns and each column receives half the ramining space*/
+
+    /*grid-template-columns: 200px 2fr 20%  3fr;*/
+    /*The remaining space will split up between column TWO and column FOUR*/
+    /*COLUMN FOUR will receive 0.5 space more than the column two */
+
+
+    grid-template-rows: 5rem 2.5rem;
+    /*first row should have 5rem  -- second row 2.5rem*/
+
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+}

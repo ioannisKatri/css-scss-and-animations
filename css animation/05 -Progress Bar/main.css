@@ -1,0 +1,15 @@
+.wrapper{
+    border:2px solid black;
+    height:50px;
+}
+
+.progress_bar{
+    background:green;
+    height:100%;
+    width:0;
+    transition: width 10s ease;
+}
+
+.wrapper:hover .progress_bar{
+    width:100%;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @-webkit-keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        div {
+            border: 5px solid #000;
+            padding: 5px;
+
+        }
+
+        .parent{
+            color:red;
+        }
+
+
+        div:checked.parent{
+            color:blue;
+        }
+
+        /*div:hover {*/
+            /*border-color: #F00;*/
+        /*}*/
+
+        /*.child {*/
+            /*display: none;*/
+        /*}*/
+
+        /*.parent:checked + .child {*/
+            /*display: block;*/
+            /*animation: fadeIn 1s;*/
+        /*}​*/
+    </style>
+</head>
+<body>
+<div class="parent" for="toggle" id="toggle">
+    Parent
+    <!--<div class="child">-->
+        <!--Child-->
+    <!--</div>-->
+</div>​
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        input[type=checkbox] + label {
+            color: #ccc;
+            font-style: italic;
+        }
+        input[type=checkbox]:checked + label {
+            color: #f00;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+<input type="checkbox" id="ossm" name="ossm">
+<label for="ossm">CSS is Awesome</label>
+</body>
+</html>

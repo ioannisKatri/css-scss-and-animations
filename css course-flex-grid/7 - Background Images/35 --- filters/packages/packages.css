@@ -1,0 +1,165 @@
+main{
+    padding-top:32px;
+}
+
+.background{
+    /*Wwith POSITION:FIXED new STACKING CONTEXT is created
+    automatically  NO matter if we apply Z-INDEX
+
+    POSITION-RELATIVE
+    POSITION-ABSOLUTE
+    Will create a stacking context once we APPLY
+    a Z-INDEX on OUR OWN*/
+    background: url("../images/plans-background.jpg") center/cover;
+    filter: grayscale(40%);
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:-1;
+    /*default value of z-index:auto which is equal to zero */
+    /*if we want to position an element below as a class we can add minus.
+    Z-index without position property makes z-index do not having any impact.
+    */
+
+    /*The z-index property specifies the stack order of an element.
+    An element with greater stack order is always in front of an
+    element with a lower stack order.
+    Note: z-index only works on positioned elements
+    (position:absolute, position:relative, or position:fixed).*/
+}
+
+.package{
+    width:80%;
+    margin:16px 0;
+    border: 4px solid #2e4f1f;
+    border-left:none;
+    position:relative;
+    z-index:1;
+}
+/*Before the Stacking context of the BADGE was the HTML
+using z-index --> PACKAGE becomes the STACKING context*/
+
+/*IF WE HAVE TWO ITEMS THAT HAVE the same z-index
+then the PACKAGE class comes after the MAIN-HEADER CLASS
+because both have the same index. The later element PACKAGE)
+will be the one that will be positioned on the top of the other.
+
+*/
+
+.package a{
+    text-decoration: none;
+    /*color inherited from body*/
+    color:inherit;
+    display: block;
+    /* display: block to ensure that the anger tag takes
+    full available width of this section (it behaves as a block tag)
+    padding would not work without display:block*/
+    padding: 32px;
+}
+
+.package__badge{
+    position:absolute;
+    top:0;
+    right:0px;
+    font-size:12px;
+    color: white;
+    margin:20px;
+    background: #ff5454;
+    padding:8px;
+    z-index:10;
+}
+
+/*In general both take the elements out of the document flow
+if you apply these values to those elements*/
+
+/*but for the fixed value the positioning context always
+is the viewport for the absolute value the position*/
+
+/*For absolute position elements the position in cotext*/
+ /*is defined based on two cases*/
+
+/*1)If you don't have any ancestors with our positioning properties applied*/
+/*then the position in context is the HTML element*/
+
+/*2)If you have ancestors with the position property applied*/
+/*then the element the absolutely positioned*/
+/*element will be positioned in relation to the closest ancestor*/
+/*which has such a position property applied.*/
+
+
+.package:hover,
+.package:active{
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-color:#ff5454;
+}
+
+.package__subtitle{
+    color:#979797;
+}
+
+.package__info{
+    padding: 16px;
+    border: 1px solid #0e4f1f;
+    font-size: 20px;
+    color: #0e4f1f;
+    background-color: white;
+}
+
+
+
+#plus{
+    /*rgba to be aple to create a transparent color*/
+    background: rgba(213, 155, 220, 0.95);
+}
+
+#free{
+    background: rgba(234, 252, 237, 0.95);
+    float:right;
+    border-right: none;
+    border-left:4px solid #2e4f1f;
+    text-align: right;
+}
+
+.clearfix{
+    clear:both;
+    /*means clear float on both sides */
+    /*we can use flexbox nowdays so much easier to do it*/
+    /*FLOAT for elements is BAD.
+    WHEN we want  the image to float around is good*/
+}
+
+/*because id has bigger specifity we will use a clean fix*/
+#free:hover,
+#free:active{
+    border-left-color:#ff5454;
+}
+
+/*an alternative is that we go up to
+.package:hover,
+.package:active{
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-color:#ff5454 !important;
+ and we use the !important
+ IT IS BAD USING IMPORTANT code becomes unreadable and brakes the concept of specifity}*/
+
+#premium{
+    background: rgba(14, 79, 31, 0.95);
+}
+
+/*descendant combinator*/
+#premium .package__title{
+    color:gold;
+}
+
+#premium .package__subtitle{
+    color:#bbb;
+}
+
+/*text align right does not work on inline elements*/
+
+
+/*float -> we can position elements differently in the document flow*/
+/*
+FLOAT-> with float we override the default positioning and tell the browser to push
+an element to the left order right of the page.
+With float they are being taken out of the document flow.*/

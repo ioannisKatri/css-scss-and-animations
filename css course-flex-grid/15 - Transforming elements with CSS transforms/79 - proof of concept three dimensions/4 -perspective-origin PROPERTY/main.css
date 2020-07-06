@@ -1,0 +1,29 @@
+.container {
+    margin: 150px auto;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    /*The perspective property has to be applied to the parent element
+    The advantage is that you have the SAME PERSPECTIVE ON ALL child elements*/
+
+    perspective-origin: 150px;
+    /*perspective-origin: right;*/
+    /*we can change the angle with perspective-origin*/
+    /*We can also add PIXELS*/
+}
+
+.box {
+    background: red;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(0deg) rotateY(30deg);
+    /*transform: perspective(1000px)rotateX(0deg) rotateY(30deg);*/
+    /*the smaller the perspective is, the close you are ot the element*/
+    /*if we increase it to 1000px we are still far away but close to what we were before*/
+
+
+    /*rotateX(1deg) -> spins around the X axis . 90deg -> it is at the point where it is about to flip on that X axis*/
+    /*rotateY(1deg) -> spins around the Y axis */
+    /*default is rotateZ --> rotate around himself*/
+}

@@ -1,0 +1,78 @@
+<!--******************************************************************************************************************-->
+<!--The stacking context is a three-dimensional conceptualization of HTML
+elements along imaginary z-axis relative to the user,
+(who is assumed to be facing the viewport or the webpage).
+
+HTML elements occupy this space in priority order based on element attributes.-->
+
+<!-- rendering order of certain elements is influenced by their z-index value.
+This occurs because these elements have special properties which cause them to form a stacking context.-->
+
+<!--https://philipwalton.com/articles/what-no-one-told-you-about-z-index/ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="main.css">
+        <title>Position</title>
+    </head>
+    <body>
+    <div class="navigation">navigation</div>
+    <div class="headline">headline
+        <div class="image-1">image-1</div>
+        <div class="image-2">image-2</div>
+        <div class="image-3">image-3</div>
+    </div>
+    <div class="contact-us">contact-us</div>
+    </body>
+</html>
+<!--https://www.smashingmagazine.com/2009/09/the-z-index-css-property-a-comprehensive-look/-->
+
+<!--https://www.youtube.com/watch?v=uS8l4YRXbaw-->
+
+<!--https://www.udemy.com/css-the-complete-guide-incl-flexbox-grid-sass/learn/v4/t/lecture/9520854?start=0-->
+
+<!--https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context-->
+
+<!--******************************************************************************************************************-->
+<!--IMPORTANT SUMMARY
+
+Stacking context is ---\\\\\\\
+Groups of elements with a common parent that move forward or backward together in the stacking order make up what is known as a stacking context.
+
+ the z-index values of its child stacking contexts only have meaning in this parent.
+ Stacking contexts are treated automically as a SINGLE UNIT in the parent stacking context.-->
+
+
+<!--
+    1) When an element is the root element of a document (the <html> element)
+
+    2) Each stacking context is completely independent of its siblings:
+only descendant elements are considered when stacking is processed.
+
+    3)Each stacking context is self-contained: after the element's contents are stacked,
+the whole element is considered in the stacking order of the parent stacking context. -->
+
+<!--Note: positioned elements with negative z-indexes are ordered first within a stacking context, which means they appear behind all other elements-->
+
+<!--******************************************************************************************************************-->
+
+<!--A stacking context is formed, anywhere in the document, by any element in the following scenarios:-->
+
+<!--Root element of the document (<html>).-->
+<!--Element with a position value absolute or relative and z-index value other than auto.-->
+<!--Element with a position value fixed or sticky (sticky for all mobile browsers, but not older desktop).-->
+<!--Element that is a child of a flex (flexbox) container, with z-index value other than auto.-->
+<!--Element with a opacity value less than 1 (See the specification for opacity).-->
+<!--Element with a mix-blend-mode value other than normal.-->
+<!--Element with any of the following properties with value other than none:-->
+<!--transform-->
+<!--filter-->
+<!--perspective-->
+<!--clip-path-->
+<!--mask / mask-image / mask-border-->
+<!--Element with a isolation value isolate.-->
+<!--Element with a -webkit-overflow-scrolling value touch.-->
+<!--Element with a will-change value specifying any property that would create a stacking context on non-initial value (see this post).-->
+<!--Element with a contain value of layout, or paint, or a composite value that includes either of them (i.e. contain: strict, contain: content).-->

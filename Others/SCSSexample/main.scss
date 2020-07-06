@@ -1,0 +1,113 @@
+$primary-color: green;
+$bg-color: #2c3e50;
+$hover-color: #009900;
+$text-color: #ffffff;
+
+h3{
+  color: $primary-color;
+}
+
+p{
+  color: $primary-color;
+}
+
+nav{
+
+  ul{
+    background: $bg-color;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+  }
+
+  li{
+
+    display: inline-block;
+  }
+
+  a{
+    color: $text-color;
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+
+  }
+
+  a:hover{
+    background: $hover-color;
+  }
+
+}
+
+/// *PROFILE  */
+@import "profile";
+
+
+.panel{
+
+  border: 3px solid dodgerblue;
+  background: lightgreen;
+  margin: 10px;
+
+}
+
+//.border-radious{
+//  -webkit-border-radius: 5px;
+//  -moz-border-radius: 5px;
+//  -ms-border-radius: 5px;
+//  -border-radius: 5px;
+//}
+//example mixins
+@mixin border-radious($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -border-radius: $radius;
+}
+
+
+.little-panel{
+  @extend .panel;
+  @include border-radious(5px);
+  font-size: 12px;
+  padding: 5px;
+}
+
+// with round corners
+.big-panel{
+  @extend .panel;
+  @include border-radious(20px);
+  font-size: 32px;
+  padding: 20px;
+
+}
+
+
+///////OPERATIONS
+
+$buttonBackground: #16A085;
+$buttonColor: #ffffff;
+$buttonPadding: 5px;
+
+.button{
+  background: $buttonBackground;
+  -webkit-border-radius:  5px;
+  color: $buttonColor;
+  display: inline-block;
+  padding: $buttonPadding;
+  text-decoration: none;
+}
+
+
+.jumbo-button{
+  @extend .button;
+  padding: $buttonPadding + 30px;
+}
+
+.light-button{
+  @extend .button;
+  background: $buttonBackground * 1.5;
+}
+
+

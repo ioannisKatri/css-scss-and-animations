@@ -1,0 +1,4 @@
+
+Notes regarding height
+
+height auto works on block elements that are block from default. even if you tell the image to be block, height is not one of the defaults in it

@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+html {
+    background: #b3b3b3;
+    padding: 5px;
+}
+
+body {
+    background: #b3b3b3;
+    padding: 5px;
+    margin: 0;
+  }
+  
+.flex-container {
+    display: flex;
+    height:1300px;
+    /*size is not predefined (width)*/
+    flex-direction: column;
+    /*default is "row" cross axis for row is top to bottom align-tems defines the position for cross axis for ROW*/
+    flex-wrap:wrap;
+    align-items:center;
+    /*defines the position of the items across the CROSS axis left to right*/
+    /*centers the items at the begining of our cross axi    s (height is  either their content or prefix) (a better version of vertical-align:center) */
+    /*cross axis goes from the top left corner to the bottom left corner*/
+    justify-content: center;
+     /*defines the position of the elements across the MAIN axis top-bottom for COLUMN*/
+    /*defines the position of the elements across the MAIN axis left to right for ROW*/
+
+    /*something like margin:0 auto;*/
+    background: white;
+    padding: 10px;
+    border: 5px solid black;
+  }
+
+.item-1 {
+    background: #ff7300;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.item-2 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 250px;
+    font-size: 1.8rem;
+}
+
+.item-3 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    height: 250px;
+}
+
+.item-4 {
+    background: #f5c096;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.item-5 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+}
+
+.item-6 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+}

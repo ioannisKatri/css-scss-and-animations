@@ -1,0 +1,17 @@
+body{
+  background: red;
+}
+//attribute selector
+[disabled] {
+  color: green;
+}
+
+
+.main-title{
+  color:yellow;
+}
+
+section{
+  color:blue;
+}
+

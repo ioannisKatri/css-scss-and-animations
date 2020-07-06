@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    color:grey;
+}
+
+.main-header{
+    width:100%;
+    background: yellow;
+    padding: 8px 16px;
+    position:fixed;
+    z-index:2;
+    top:0;
+    left:0;
+}
+
+.main-header__brand{
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:22px;
+    height:20px;
+    display:inline-block;
+    /*Now the image respects the containers style and we can use width and height*/
+    /* <!--CHANING A TO INLINE-BLOCK-->
+      <!--IT was not the image but the fact the the "A" was not
+   a block or inline block element*/
+}
+
+/*descendant SELECTOR*/
+.main-header__brand img{
+    /*with no width it is using the default of the container height as width*/
+    /*width:100%; ->it will take the full width the default IF the container does not have width
+    If it has it will use the width provided by the container*/
+
+    height:100%;  /* it will take the height of the container*/
+    /*with no height it will take the default*/
+
+}
+
+.main-header > div{
+    display: inline-block;
+}
+
+.main-header div + .main-nav{
+    display: inline-block;
+    text-align: right;
+    width:calc(100% - 74px);
+    vertical-align: middle;
+}
+
+.main-nav__item{
+    display:inline-block;
+    margin:0 1em;
+    list-style: none;
+}
+
+.main-nav__item a{
+    text-decoration:none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 0.2rem 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active{
+    color:white;
+    border-bottom: 5px solid white;
+}
+
+/*it has the same specifity with .main-nav__item a SO THE ORDER MATTERS (it is after the .main-nav__item a
+ it will overwrite it*/
+.main-nav__item--cta a{
+    color:white;
+    background: #ff1b68;
+    padding:0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+    color:#ff1b68;
+    background: white;
+    border:none;
+}
+/*-------------------*/
+
+.main-footer{
+    background-color: black;
+    /*color:white; -> does not work because anchor tag has default color.*/
+    margin-top:3rem;
+    padding: 2rem;
+}
+
+.main-footer__links{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+.main-footer__link{
+    display:inline-block;
+    margin:0 1rem;
+}
+
+.main-footer__link > a{
+    color:white;
+    text-decoration: none;
+}
+
+
+.main-footer__link > a:hover,
+.main-footer__link > a:active{
+    color:#ccc;
+}
+
+
+/*-------*/
+
+.button{
+    background: #0e4f1f;
+    color:white;
+    font: inherit;
+    border: 1.5px solid red;
+    padding:8px;
+    border-radius:8px;
+    font-weight: bold;
+    cursor:pointer;
+}
+/*Button has default assign variables*/
+/*inherit forces the inherited styles to be applied (font-size and font-family*/
+
+.button:hover,
+.button:active{
+    background-color: white;
+    color:#0e4f1f;
+}
+
+/* PSEUDO
+        1)classes allow us to define a style of a special --state-- of an element
+            like the hover or the active state
+            a) defined with :class name (:hover, :active)
+
+        2)elements allow us to define of a specific --part-- of an element
+            b) defined with ::element name (::first-letter, ::first-line, ::after, ::before)
+
+::after and ::before allow to render content through CSS. */
+button:focus{
+    outline: none;
+}
+
+.backdrop{
+    top:0;
+    left:0;
+    display: none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:100;
+    background:rgba(0,0,0,0.5);
+}

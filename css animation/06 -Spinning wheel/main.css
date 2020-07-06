@@ -1,0 +1,25 @@
+.wrapper{
+    background: #ddd;
+    padding:20px;
+}
+
+.wrapper:hover .container{
+    transform: translateX(1200px) rotate(360deg);
+}
+
+.container{
+    display: inline-block;
+    width:200px;
+    height:200px;
+    border:10px dashed green;
+    border-radius:50%;
+    transition: transform 2s ease-out;
+}
+
+.wheel{
+    text-align: center;
+    line-height:200px;
+    height:100%;
+    text-transform: uppercase;
+    font-size:2rem;
+}

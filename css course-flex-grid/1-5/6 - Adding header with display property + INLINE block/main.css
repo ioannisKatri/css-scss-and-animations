@@ -1,0 +1,80 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+}
+
+#product-overview {
+    background: #ff1b68;
+    width:100%;
+    height:520px;
+    padding:10px;
+}
+
+
+.section-title {
+    color: #2ddf5c;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+}
+
+.main-header{
+    width:100%;/*Optional because it is block level element.
+    It takes two full entire width anyways but it is a still something we can set up*/
+    background: #2ddf5c;
+    padding: 8px 16px;
+}
+
+.main-nav__item{
+    display:inline-block;
+    /*inline-block --> These elements can go next to each other but they still behave like block elements when it comes
+    to setting top and bottom margins or padding. Things that are not possible on inline elements.*/
+    /*INLINE -> RIGHT AND LEFT (margin) ------ padding has different effect*/
+    /*INLINE-BLOCK -> RIGHT AND LEFT + TOP AND RIGHT (margin-padding)*/
+
+    /*Block-level elements are rendered as a block and hence take up all the available horizontal space.
+    You can set margin-top and margin-bottom and
+    two block-level elements will render in two different lines.*/
+
+    /*Some examples are: <div> , <section> , <article> , <nav>  but also <h1> , <h2>  etc and <p> .*/
+
+
+    /***************/
+    /*INLINE */
+    /***************/
+
+    /*https://www.udemy.com/css-the-complete-guide-incl-flexbox-grid-sass/learn/v4/t/lecture/9464830?start=0*/
+
+    /*Inline elements on the other hand only take up the space they require to fit their content in.
+    Hence two inline-elements will fit into the same line (as long as the combined
+    content doesn't take up the entire space in which case a line break would be added).*/
+
+    /*They also use the box-model you learned about but margin-top  and margin-bottom
+    have no effect on the element. padding-top  and padding-bottom  also have a different effect.
+    They don't push the adjacent content away but they will do so with the element border*/
+
+    /* Additionally, setting a width  or height  on an inline element also has no effect.
+    The width and height is auto to take as much space as required by the content.*/
+
+    /*Some example elements are: <a> , <span> , <img> */
+
+    /*https://hacks.mozilla.org/2015/03/understanding-inline-box-model/*/
+
+    /***************/
+    /*DISPLAY */
+    /***************/
+    /*display: none;  - this value removes the element to which you apply it from the document flow.
+    This means that the element is not visible and it also doesn't "block its position".
+    Other elements can (and will) take its place instead.
+
+
+
+    There is an alternative to that though.
+    If you only want to hide an element but you want to keep its place (
+    i.e. other elements don't fill the empty spot), you can use -->
+    --> visibility: hidden;
+
+*/
+}

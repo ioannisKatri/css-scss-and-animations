@@ -1,0 +1,360 @@
+header {
+
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(#fff, .8);
+    background: $slate-300;
+    border-radius: 0 0 13px 13px;
+    width: 100%;
+    height: 75px;
+    z-index: -1;
+    display: none;
+    @extend .container;
+  }
+
+  [class*=col],
+  .row {
+    position: static;
+  }
+
+  .logo {
+    width: 230px;
+    height: 80px;
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+
+  .dropdown {
+    color: lighten($slate-300, 40%);
+  }
+
+  .dropdownTyreFinder {
+    margin: 1rem 0;
+    .dropdown-toggle {
+      &[aria-expanded=true] {
+        background: #fff;
+        color: theme-color('secondary');
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    .dropdown-menu {
+      &.show {
+        top: -5px !important;
+      }
+    }
+  }
+
+  .dropdown-countries {
+    .dropdown-toggle,
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .flag {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background-position: center center;
+      background-size: cover;
+      &.flag-uk {
+        background-image: url(#{$themePath}/assets/img/uk.png);
+      }
+      &.flag-fr {
+        background-image: url(#{$themePath}/assets/img/fr.png);
+      }
+      &.flag-es {
+        background-image: url(#{$themePath}/assets/img/es.png);
+      }
+      &.flag-it {
+        background-image: url(#{$themePath}/assets/img/it.png);
+      }
+      &.flag-de {
+        background-image: url(#{$themePath}/assets/img/de.png);
+      }
+    }
+  }
+
+  nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      font-weight: bold;
+      font-family: 'Roboto Slab', serif;
+      a {
+        color: $charcoal-200;
+      }
+    }
+    .nav-sub {
+      display: none;
+      &-image {
+        flex-shrink: 0;
+        width: 15vh;
+      }
+      &-name {
+        padding-left: 1vw;
+        font-size: 14px;
+        p {
+          font-size: 20px;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        transition: .3s;
+        &:hover {
+          &,
+          span {
+            color: $corn-300;
+          }
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+    }
+
+    .has-sub {
+      &.active {
+        .nav-sub {
+          display: block;
+          &-image {
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  @include media-breakpoint-up(xl) {
+    nav {
+      font-size: 22px;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &:after {
+      display: block;
+    }
+
+    .logo {
+      height: 138px;
+    }
+    nav {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        a {
+          position: relative;
+          &:after {
+            content: '';
+            height: 2px;
+            background: theme-color('primary');
+            width: 100%;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            opacity: 0;
+            transition: .2s ease-in-out;
+          }
+          &:hover {
+            color: inherit;
+            &:after {
+              opacity: 1;
+              bottom: -5px;
+            }
+          }
+        }
+        li {
+          &.has-sub {
+            &>a {
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.514' height='6.757' viewBox='0 0 13.514 6.757'%3E%3Cpath id='Path_3490' data-name='Path 3490' d='M0,0,6.757,6.757,13.514,0Z' fill='%23a5be71'/%3E%3C/svg%3E%0A");
+              background-position: right center;
+              padding-right: 20px;
+              background-size: 10px;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+      .nav-sub {
+        z-index: 10;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        padding: 2rem 0;
+      }
+    }
+    .tyre-finder {
+      width: 360px;
+      max-width: 100%;
+      margin: 1rem 2rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .toggleSearch {
+      cursor: pointer;
+      display: block;
+      width: 34px;
+      height: 30px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37.116' height='36.012' viewBox='0 0 37.116 36.012'%3E%3Cg id='Group_259' data-name='Group 259' transform='translate(-258 -49)'%3E%3Cg id='Ellipse_12' data-name='Ellipse 12' transform='translate(258 49)' fill='none' stroke='%23f2b134' stroke-width='4'%3E%3Ccircle cx='13.261' cy='13.261' r='13.261' stroke='none'/%3E%3Ccircle cx='13.261' cy='13.261' r='11.261' fill='none'/%3E%3C/g%3E%3Cline id='Line_213' data-name='Line 213' x2='14.366' y2='14.366' transform='translate(279.336 69.231)' fill='none' stroke='%23f2b134' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E%0A");
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 4vw;
+    }
+    .toggleMenu {
+      cursor: pointer;
+      display: block;
+      height: 4px;
+      width: 34px;
+      border-bottom: 4px solid $corn-300;
+      position: relative;
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        background: $corn-300;
+        height: 4px;
+        width: 34px;
+        position: absolute;
+        transition: .3s;
+        left: 0;
+        transform-origin: center;
+      }
+      &:before {
+        top: -11px;
+      }
+      &:after {
+        top: 11px;
+      }
+      &.active {
+        border-color: transparent;
+        &:before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+        &:after {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
+    }
+    .mobile-hidden {
+      display: none;
+    }
+    &.active {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      background: rgba(#000, .2);
+      & > .container {
+        background: #fff;
+        padding-bottom: 10vh;
+      }
+      .mobile-hidden {
+        display: flex;
+      }
+      nav {
+        margin-bottom: 1rem;
+        font-size: 20px;
+        line-height: 48px;
+      }
+      .languages {
+        border-bottom: 1px solid $light;
+        padding-bottom: 1rem;
+        font-size: 20px;
+        .dropdown-menu {
+          &.show {
+            border: 1px solid $light !important;
+          }
+        }
+      }
+      .dropdown {
+        color: $charcoal-200;
+        &.dropdownTyreFinder {
+          .dropdown-menu {
+            &.show {
+              width: 100%;
+              padding: 10px;
+              position: static !important;
+              transform: none !important;
+            }
+          }
+          .tyre-finder {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .mobile-search-form {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      transition: .3s ease-in-out;
+      width: 100%;
+      background: $slate-300;
+      z-index: 1001;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      form {
+        flex-grow: 1;
+      }
+      .toggleSearch {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33.941' height='33.941' viewBox='0 0 33.941 33.941'%3E%3Cg id='Group_701' data-name='Group 701' transform='translate(-336.03 -49.086)'%3E%3Cline id='Line_8' data-name='Line 8' x1='44' transform='translate(337.444 81.613) rotate(-45)' fill='none' stroke='%23d9dfe3' stroke-width='4'/%3E%3Cline id='Line_7' data-name='Line 7' x1='44' transform='translate(337.444 50.5) rotate(45)' fill='none' stroke='%23d9dfe3' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E%0A");
+      }
+      &.active {
+        top: 0;
+      }
+    }
+    nav {
+      li {
+        &.has-sub {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.514' height='6.757' viewBox='0 0 13.514 6.757'%3E%3Cpath id='Path_3490' data-name='Path 3490' d='M0,0,6.757,6.757,13.514,0Z' fill='%23a5be71'/%3E%3C/svg%3E%0A");
+          background-position: right 20px;
+          padding-right: 20px;
+          background-size: 10px;
+          background-repeat: no-repeat;
+          &.active {
+            .nav-sub {
+              display: block;
+              &-image {
+                width: 25%;
+                margin-right: 10%;
+              }
+              &-name {
+                line-height: 1.5;
+                p {
+                  font-size: 16px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

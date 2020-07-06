@@ -1,0 +1,42 @@
+.container {
+    position:relative;
+    margin: 150px auto;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    /*The perspective property has to be applied to the parent element
+    The advantage is that you have the SAME PERSPECTIVE ON ALL child elements*/
+
+    perspective-origin: 500px;
+    /*perspective-origin: center;*/
+    /*we can change the angle with perspective-origin*/
+    /*We can also add PIXELS*/
+}
+
+.box1 {
+    position:absolute;
+    background: red;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(80deg);
+    color:white;
+}
+
+.box2 {
+    transform:translateX(1rem) translateZ(-100rem);
+    /*moving the element on Z axis is the one that creates a 3-D effect*/
+    /*It is moving towards us*/
+    /*It is ins the box it just moved away from that*/
+    position:absolute;
+    background: blue ;
+    width: 100%;
+    height: 100%;
+    color:white;
+
+    /*IMPORTANT
+
+    we will see it on top of red because
+    the ZED index still apply when it comes on how these elements stack*/
+}
+

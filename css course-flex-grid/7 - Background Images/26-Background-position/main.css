@@ -1,0 +1,210 @@
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/background-position*/
+
+/*IMPORTANT*/
+/* https://css-tricks.com/almanac/properties/b/background-position/           */
+/*Percentages work a little differently.
+
+Get your math hats out: moving a background image by X% means
+it will align the X% point in the image to the X% point in
+the container.
+For example, 50% means it will align the middle of the image with
+the middle of the container.
+100% means it will align the last pixel of the image
+with the last pixel of the container, and so on.*/
+/*CENTER - left - top */
+/*center is like i said 50% and 50%*/
+
+
+/*PREDEFINED VALUES*/
+
+/*CENTER - left - top */
+/*center is like i said 50% and 50%*/
+
+/*with left-top means------
+That the left edge is positioned on the left
+edge of the container */
+
+/*not fit into the container no matter if it's on the Y or x axis.
+
+50 percent will be dropped on the left and right
+and top and bottom so that the center of the image
+
+is the center of the container.*/
+#product-overview {
+    /*background: url("freedom.jpg");*/
+    background-image: url("freedom.jpg");
+    background-size: cover;
+    background-position:left 10% bottom 20%;
+    /*define how the left edge of the image should be positioned relative
+    to the left edge of the container-----
+    background-position:20px;
+    if we said 20 pixels This means the left edge of the image.
+So here where do you make ends should be positioned 20 pixels
+to the left edge of the container.
+So there is an empty space of 20 pixels*/
+
+    /*WITH PERCENTAGE background-position:10%
+    the percentage values.
+
+CROPPED ========== PERIKOPI
+EXCESS ======== EPIPLEON
+with the percentage you can define how much of the excess space,
+of the parts of the image that do not make it into the container.
+How these parts should be distributed.*/
+
+    /*WITH PERCENTAGE  background-position:0% 10%*/
+    background-repeat:no-repeat;
+     width:100%;
+    /*If I use margin:10px; it will not affect the right side. when the width is 100% */
+    height:520px;
+    padding:10px;
+    margin-top:67px;
+    position:relative;
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    position:absolute;
+    bottom:5%;
+    left:3%;
+}
+
+.plan__list{
+    width:80%;
+    margin: 0 auto;
+    /*margin:0 auto to center them*/
+    text-align: center;
+}
+
+.plan{
+    background: #d5ffdc;
+    text-align: center;
+    padding:16px;
+    margin:8px;
+    display: inline-block;
+/*using width 30% it will get 30% of the page width since we never restrict that on any higher level element*/
+    width:30%;
+    vertical-align: middle;
+}
+
+.plan--highlighted{
+    background:#19b84c;
+    color:white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    /* xAxis = 2px, yAxis=2px, blurriness=2px -> like a spray,
+    spear(how much the shadow should actually spread beyond the borders)=2px
+    then we add the color. */
+}
+
+.plan__title{
+    color:#0e4f1f;
+}
+
+.plan__price{
+    color: #858585;
+}
+
+
+.plan--highlighted .plan__title {
+    color:white;
+}
+
+.plan--highlighted .plan__price {
+    color:#0e4f1f;
+}
+
+.plan__features{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+
+
+.plan__features .plan__feature{
+    margin:8px 0;
+}
+
+.plan__annotation{
+    background: white;
+    color: #19b84c;
+    padding:10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    /*border-radius -> round the corners*/
+    /*starts from top-left, then too-right, bottom-right, bottom-left*/
+    border-radius: 4px 4px 4px 4px;
+}
+
+
+
+#key-features{
+    background: #ff1b68;
+    margin-top:80px;
+    padding:16px;
+}
+
+#key-features .section-title{
+    color:white;
+    margin:32px;
+}
+
+.key-feature__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature {
+    display: inline-block;
+    /*we do not apply 33 because of the inline block behavior where whitespace in between
+    also gets a width and therefore 33 perfect would actually not fill the entire width but a little bit
+    more and hence you would have the line break with 30% percent.*/
+    width:30%;
+    vertical-align: top;
+    /*moves up the letters (all the key features are aligned to the top*/
+}
+
+.key-feature__image{
+    background: #ffcede;
+    width:128px;
+    border:2px solid #424242;
+    border-radius:50%;
+    /*perfect circle border-radious 50%*/
+    /*we need also height for the image
+    to get the perfect circle height needs to match the width*/
+    height:128px;
+    /*to center it we will use margin auto*/
+    /*auto fills automatically the available space to the left and right equally*/
+    margin: 0 auto;
+}
+
+.key-feature__description{
+    /*text-align: center;*/
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+/*.main-nav__item a:before{*/
+/*content: "(Link) ";*/
+/*color:red;*/
+/*}*/
+/*.main-nav__item a:after{*/
+/*content: " (Link)";*/
+/*color:red;*/
+/*}*/
+
+
+p::first-letter{
+    font-size: 20px;
+    color:red;
+}

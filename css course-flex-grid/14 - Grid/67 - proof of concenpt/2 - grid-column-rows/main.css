@@ -1,0 +1,28 @@
+*{
+    
+}
+.container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 200px 150px 20%;
+    /*this allows to override the one column we have by default
+    and add more columns*/
+
+    /*first column is 200px, second 150px third 20% of the surrounding container*/
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+}

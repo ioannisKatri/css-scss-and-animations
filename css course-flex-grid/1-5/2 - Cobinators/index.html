@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<body>
+<main>
+    <!--values are tightly coupled to specific properties-->
+    <!--CSS is a combination of selectors and declarations-->
+    <!--Specificity is about resolving conflicts that arise from multiple css rules-->
+    <!--parent styles are generally inherited-->
+    <div class="container">
+        <h3>DIRECT SELECTORS WITHOUT COMBINATORS ARE SHOWING A BIT OF A BETTER PERFORMANCE</h3>
+        <h4>Also matters what you combine</h4>
+        <hr>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>SELECTORS</th>
+                <th>PROPERTIES</th>
+                <th>VALUES</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>div</td>
+                <td>background-color</td>
+                <td>red</td>
+            </tr>
+            <tr>
+                <td>.blog-post</td>
+                <td>width</td>
+                <td>30%</td>
+            </tr>
+            <tr>
+                <td>#main-title</td>
+                <td>color</td>
+                <td>red</td>
+            </tr>
+            <tr>
+                <td>[disabled]</td>
+                <td>margin</td>
+                <td>10px</td>
+            </tr>
+            <tr>
+                <td>*{} -> universal selector</td>
+                <td>display</td>
+                <td>block</td>
+            </tr>
+            </tbody>
+        </table>
+        <hr>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>PREDEFINED</th>
+                <th>COLORS</th>
+                <th>Length, Sizes & <br> Numbers</th>
+                <th>FUNCTIONS</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>display:block</td>
+                <td>background:red;</td>
+                <td>height: 100px;</td>
+                <td>background:URL(..);</td>
+            </tr>
+            <tr>
+                <td>overflow:auto;</td>
+                <td>color: #fa923f;</td>
+                <td>width:20%;</td>
+                <td>transform:scale(...);</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>color: #ccc;</td>
+                <td>order:1;</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+       <!--Adjacent Sibling-->
+        <!--Elements share the same parent-->
+        <h1>SELECTORS WITH COMBINATORS</h1>
+        <h3>Adjacent Sibling</h3>
+        <div class="adjacent">
+            <h2>NOT APPLIED</h2>
+            <p>CSS APPLIED</p>
+            <p>CSS NOT APPLIED</p>
+            <h2>NOT APPLIED</h2>
+            <h3>NOT APPLIED</h3>
+            <p>NOT APPLIED</p>
+            <h2>NOT APPLIED</h2>
+            <p>CSS APPLIED</p>
+            <p>CSS APPLIED</p>
+        </div>
+        <hr>
+        <!--General Sibling-->
+        <!--Elements share the same parent-->
+        <!--It is important that there is a H-2 sibling. Does not have to be directly in front of it just
+        an element at the same level.-->
+        <h3>General Sibling</h3>
+        <div class="general">
+            <h2>NOT APPLIED</h2>
+            <p>CSS APPLIED</p>
+            <h2>NOT APPLIED</h2>
+            <h3>NOT APPLIED</h3>
+            <p>1applied</p>
+            <p>2applied</p>
+            <article>
+                <p>Inside Article -> NOT APPLIED</p>
+            </article>
+            <!--<h2>NOT APPLIED</h2>-->
+            <p>CSS APPLIED</p>
+            <article>
+                <p>Inside Article -> NOT APPLIED</p>
+            </article>
+
+        </div>
+        <hr>
+        <!--Child combinator-->
+        <!--Any paragraph that is a DIRECT CHILD TO THE DIV should get that style-->
+        <h3>Child Combinator</h3>
+        <div class="child">
+            <div>NOT APPLIED</div>
+            <p>CSS APPLIED</p>
+            <p>2 - CSS APPLIED</p>
+            <!--<div>NOT APPLIED</div>-->
+            <article>
+                <p>Inside Article -> NOT APPLIED</p>
+            </article>
+            <p>3 - CSS APPLIED</p>
+        </div>
+        <hr>
+        <!--Descendant combinator-->
+        <!--The level does not matter. No matter if you are a direct child to the div or not.
+        It just matters that there is a div somewhere above them in the DOM-->
+        <!--Second element is just a descendant of the first not a direct parent-->
+        <h3>Descendant Combinator</h3>
+        <div class="descendant">
+            <div>NOT APPLIED</div>
+            <p>CSS APPLIED</p>
+            <div>NOT APPLIED</div>
+            <article>
+                <p>Inside Article -> CSS APPLIED</p>
+            </article>
+            <p>CSS APPLIED</p>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

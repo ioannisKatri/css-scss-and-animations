@@ -1,0 +1,17 @@
+//Adjacent Combinator
+
+div .adjacent h2 +p {
+  color:red;
+}
+
+div .general h2 ~ p {
+  color:blue;
+}
+
+div .child > p {
+  color: green;
+}
+
+div .descendant p{
+  color:red;
+}

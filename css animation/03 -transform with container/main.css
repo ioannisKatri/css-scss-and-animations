@@ -1,0 +1,17 @@
+.container{
+    display: inline-block;
+    height:200px;
+    width:200px;
+    border: 20px solid black;
+}
+
+.box{
+    height:100%;
+    background: #aaa;
+    transform-origin: bottom right;
+    transition: transform 1s;
+}
+
+.container:hover .box{
+    transform: rotate(60deg);
+}
